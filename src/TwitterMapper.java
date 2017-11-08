@@ -40,9 +40,7 @@ public class TwitterMapper extends Mapper<Object, Text, Text, IntWritable> {
       try {
 
 
-                String clean =  value.toString().replaceAll("; ", ""); // cleaning string(data) from "; " ==> because semicolon is used for split
-
-                String[] itr = clean.toString().split(";"); // exploed and parsed to array and data type is string fix
+                String[] itr = value.toString().split(";"); // exploed and parsed to array and data type is string fix
 
                 if(itr.length >= 4){
 
